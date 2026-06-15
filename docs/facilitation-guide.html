@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agentic Coding with Claude Code — Facilitation Guide &amp; Demo Playbook</title>
+<style>
+  :root {
+    --maw-blue: #0057B8;
+    --maw-blue-dark: #00407f;
+    --maw-teal: #00BAB3;
+    --maw-red: #FF585D;
+    --maw-yellow: #FBD872;
+    --maw-orange: #FFB549;
+    --maw-light-blue: #8DC8E8;
+    --maw-dark-gray: #75787B;
+    --maw-light-gray: #BBBCBC;
+    --ink: #1f2328;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Lato", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.62;
+    color: var(--ink);
+    background: #eef3f8;
+    margin: 0;
+    padding: 0;
+  }
+  main {
+    max-width: 860px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 0 0 72px;
+    box-shadow: 0 1px 24px rgba(0,87,184,0.10);
+  }
+  .wrap { padding: 0 44px; }
+
+  h1, h2, h3, h4 {
+    font-family: Georgia, "Droid Serif", "Times New Roman", serif;
+    color: var(--maw-blue);
+  }
+  h2 {
+    font-size: 1.55rem; line-height: 1.25; margin: 2.2em 0 0.2em;
+    font-weight: 700; padding-bottom: 0.28em; border-bottom: 3px solid var(--maw-blue);
+  }
+  h3 { font-size: 1.22rem; line-height: 1.3; margin: 1.5em 0 0.4em; font-weight: 700; color: var(--maw-blue-dark); }
+  h4 { font-size: 1.02rem; line-height: 1.35; margin: 1.2em 0 0.3em; font-weight: 700; color: var(--maw-dark-gray); font-family: "Lato", Arial, sans-serif; text-transform: uppercase; letter-spacing: 0.05em; }
+  p { margin: 0 0 1em; }
+  ul, ol { margin: 0 0 1em; padding-left: 1.4em; }
+  li { margin: 0.32em 0; }
+  a { color: var(--maw-blue); }
+  strong { font-weight: 700; }
+
+  /* Cover banner */
+  .cover { background: var(--maw-blue); color: #ffffff; padding: 48px 44px 40px; }
+  .cover .eyebrow { font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; color: var(--maw-yellow); margin: 0 0 14px; }
+  .cover h1 { font-family: Georgia, "Droid Serif", serif; color: #ffffff; font-size: 2.35rem; line-height: 1.16; margin: 0 0 0.35em; font-weight: 700; }
+  .cover .sub { font-size: 1.06rem; color: #dceaf8; margin: 0 0 22px; max-width: 44em; }
+  .cover .org { display: inline-block; font-weight: 700; font-size: 0.92rem; letter-spacing: 0.02em; border-top: 2px solid var(--maw-teal); padding-top: 12px; color: #ffffff; }
+
+  /* Meta strip */
+  .meta { background: #f3f7fb; border: 1px solid #d6e3f0; border-radius: 6px; padding: 12px 18px; margin: 24px 0 8px; color: #34506b; font-size: 0.92rem; }
+  .meta strong { color: var(--maw-blue-dark); }
+  .muted { color: var(--maw-dark-gray); }
+
+  /* Callouts */
+  .callout { border-radius: 6px; padding: 16px 20px; margin: 1.4em 0; }
+  .callout p:last-child { margin-bottom: 0; }
+  .callout-label { font-weight: 800; margin: 0 0 6px; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.82rem; }
+  .callout.info  { background: #eaf2fb; border-left: 5px solid var(--maw-blue); }
+  .callout.info .callout-label { color: var(--maw-blue-dark); }
+  .callout.tip   { background: #e6f8f7; border-left: 5px solid var(--maw-teal); }
+  .callout.tip .callout-label { color: #00837e; }
+  .callout.ground { background: #fff0f0; border: 2px solid var(--maw-red); border-left: 8px solid var(--maw-red); }
+  .callout.ground .callout-label { color: #d8323a; font-size: 0.92rem; }
+  .callout.ground p { color: #5c1f22; }
+
+  /* Stat row */
+  .stats { display: flex; flex-wrap: wrap; gap: 12px; margin: 1.2em 0 0.4em; }
+  .stat { flex: 1 1 130px; background: var(--maw-blue); color: #fff; border-radius: 8px; padding: 16px 14px; text-align: center; }
+  .stat .n { font-family: Georgia, serif; font-size: 1.9rem; font-weight: 700; line-height: 1; }
+  .stat .l { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; margin-top: 6px; color: #d6e7f7; }
+
+  /* Function demo cards */
+  .fn-card { border: 1px solid #d6e3f0; border-radius: 10px; margin: 1.5em 0; overflow: hidden; }
+  .fn-head { background: var(--maw-blue); color: #fff; padding: 16px 22px; }
+  .fn-head .fn-title { font-family: Georgia, serif; font-size: 1.32rem; font-weight: 700; margin: 0; }
+  .fn-head .fn-people { font-size: 0.9rem; color: #cfe2f5; margin: 4px 0 0; }
+  .fn-head .fn-theme { display: inline-block; margin-top: 10px; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.35); border-radius: 999px; padding: 3px 12px; font-size: 0.8rem; font-weight: 700; }
+  .fn-body { padding: 8px 22px 20px; }
+  .demo { margin: 18px 0 0; }
+  .demo-title { font-weight: 800; color: var(--maw-blue-dark); font-size: 1.0rem; margin: 0 0 2px; }
+  .demo-flag { display: inline-block; background: var(--maw-yellow); color: #6b4d00; font-size: 0.68rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; padding: 2px 8px; border-radius: 4px; margin-left: 8px; vertical-align: middle; }
+  .why { font-size: 0.9rem; color: #00837e; margin: 8px 0 0; padding-left: 22px; position: relative; }
+  .why::before { content: "\2192"; position: absolute; left: 0; font-weight: 800; color: var(--maw-teal); }
+  .why strong { color: #006e69; }
+  .followup-label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--maw-dark-gray); font-weight: 800; margin: 12px 0 4px; }
+
+  /* Prompt code blocks — easy to select & copy */
+  .prompt {
+    background: #f5f8fc;
+    border: 1px solid #cdddee;
+    border-left: 5px solid var(--maw-blue);
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin: 8px 0;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.875rem;
+    line-height: 1.55;
+    color: #14304d;
+    white-space: pre-wrap;
+    word-break: break-word;
+    -webkit-user-select: all;
+    user-select: text;
+    overflow-x: auto;
+  }
+  .prompt-tag { font-family: "Lato", Arial, sans-serif; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--maw-blue); display: block; margin: 10px 0 2px; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; margin: 1.2em 0; font-size: 0.93rem; }
+  th, td { text-align: left; padding: 10px 13px; border-bottom: 1px solid #e3e9f0; vertical-align: top; }
+  th { background: var(--maw-blue); color: #fff; font-weight: 700; border-bottom: none; }
+  tbody tr:nth-child(even) { background: #f4f8fc; }
+  td.time { font-weight: 700; color: var(--maw-blue-dark); white-space: nowrap; }
+
+  hr { border: none; border-top: 1px solid #e3e9f0; margin: 2.4em 0; }
+  .footer { text-align: center; color: var(--maw-dark-gray); font-size: 0.84rem; margin-top: 2.4em; padding-top: 18px; border-top: 2px solid var(--maw-blue); }
+  .footer .tag { font-family: Georgia, serif; font-style: italic; color: var(--maw-blue); font-size: 0.98rem; }
+
+  @media print {
+    body { background: #fff; }
+    main { box-shadow: none; max-width: 100%; }
+    .fn-card, .callout, .prompt, table, .stats { page-break-inside: avoid; }
+    h2, h3 { page-break-after: avoid; }
+  }
+  @media (max-width: 620px) { .wrap, .cover { padding-left: 22px; padding-right: 22px; } }
+</style>
+</head>
+<body class="theme-professional">
+<main>
+
+  <header class="cover">
+    <p class="eyebrow">IT Enablement Cohort · Familiarization Session</p>
+    <h1>Agentic Coding with Claude Code</h1>
+    <p class="sub">Facilitation Guide &amp; Demo Playbook — everything a facilitator needs to run the session, and every demo prompt ready to copy and paste.</p>
+    <span class="org">Make-A-Wish America · IT Enablement Cohort</span>
+  </header>
+
+  <div class="wrap">
+
+  <div class="meta">
+    <strong>Audience:</strong> 18 colleagues across 5 functions &nbsp;·&nbsp;
+    <strong>Format:</strong> 60-minute live session + hands-on &nbsp;·&nbsp;
+    <strong>Keep this:</strong> reference doc &amp; copy-paste demo library
+  </div>
+
+  <!-- SECTION 1 -->
+  <h2>1 · What this is &amp; how to run the session</h2>
+  <p>Agentic coding is <strong>not autocomplete</strong>. Claude Code is a working partner that reads the files in a project, runs commands, writes and edits code across the whole codebase, checks its own work, and iterates until the job is done. You describe the <em>outcome</em> in plain English — Claude figures out the steps.</p>
+  <p>The shift we want this cohort to feel: you stop typing every line and start <strong>delegating multi-step technical work</strong>. Instead of "write this one function," you say "automate this onboarding runbook end-to-end, add a safety switch, and test it" — and you review the result.</p>
+  <p>This session is a familiarization, not a training course. The goal is a single, vivid realization for each person: <em>"I could hand a real task from my week to this."</em> Lead with a live demo, keep each one to a clean before&nbsp;&rarr;&nbsp;after, and let people try it themselves.</p>
+
+  <aside class="callout info">
+    <p class="callout-label">How to use this playbook</p>
+    <p>Section 4 has a demo card per function with copy-paste-ready prompts. Pre-stage the companion sample files (Section 7) so every demo starts instantly. Run the 60-minute agenda in Section 5, lean on the facilitation tips in Section 6, and leave this document with attendees afterward.</p>
+  </aside>
+
+  <!-- SECTION 2 -->
+  <h2>2 · Ground rule — synthetic data only</h2>
+  <aside class="callout ground">
+    <p class="callout-label">⚠ Non-negotiable: synthetic data only</p>
+    <p>Every demo uses <strong>synthetic or non-production data</strong>. Make-A-Wish handles eligibility and medical PHI. <strong>Never paste real wish-kid, donor, or patient data into a demo</strong> — not into a prompt, not into a sample file, not "just to see what happens." Use the provided fake files for every exercise.</p>
+    <p>If an attendee wants to try their own real task, have them describe it in the abstract or rebuild it with invented data. When in doubt, leave it out.</p>
+  </aside>
+
+  <!-- SECTION 3 -->
+  <h2>3 · The cohort</h2>
+  <p>Eighteen colleagues across five functions. Each function has a tailored demo set in Section 4, chosen for what will land hardest with that group.</p>
+  <div class="stats">
+    <div class="stat"><div class="n">5</div><div class="l">Functions</div></div>
+    <div class="stat"><div class="n">18</div><div class="l">People</div></div>
+  </div>
+  <table>
+    <thead><tr><th>Function</th><th>People</th><th>Demo theme</th></tr></thead>
+    <tbody>
+      <tr><td>Product Management</td><td>6</td><td>Idea &rarr; working prototype; killing doc drudgery</td></tr>
+      <tr><td>Business Intelligence</td><td>4</td><td>SQL, DAX, pipelines, documenting the undocumented</td></tr>
+      <tr><td>Infrastructure &amp; Architecture</td><td>3</td><td>IaC, Azure governance, AI prototyping</td></tr>
+      <tr><td>Engineering</td><td>3</td><td>Automating repetitive ops &amp; admin</td></tr>
+      <tr><td>Data &amp; Reporting / Governance</td><td>2</td><td>Governance &amp; quality as code (HIPAA-relevant)</td></tr>
+    </tbody>
+  </table>
+
+  <!-- SECTION 4 -->
+  <h2>4 · Per-function demo cards</h2>
+  <p>Each card lists the theme, the people, and the demos with their <strong>copy-paste prompts</strong>. Select any prompt block and copy it straight into Claude Code.</p>
+
+  <!-- InfraArch -->
+  <div class="fn-card">
+    <div class="fn-head">
+      <p class="fn-title">🏗️ Infrastructure &amp; Architecture</p>
+      <p class="fn-people">Eric Anglin · Joseph Socarras</p>
+      <span class="fn-theme">IaC · Azure governance · AI prototyping</span>
+    </div>
+    <div class="fn-body">
+
+      <div class="demo">
+        <p class="demo-title">Demo 1 — Scaffold compliant Azure IaC</p>
+        <span class="prompt-tag">Prompt</span>
+<pre class="prompt">Create a Bicep template for a standard Azure App Service + Key Vault + Storage account. Apply our naming convention maw-&lt;env&gt;-&lt;app&gt;-&lt;resource&gt;, tag everything with CostCenter, Owner, and Environment, and make the Key Vault deny public network access by default.</pre>
+        <p class="followup-label">Follow-up</p>
+<pre class="prompt">Now add a Log Analytics workspace and wire diagnostic settings to it.</pre>
+        <p class="why"><strong>Why it lands:</strong> governance baked in from the first keystroke — naming, tagging, and network policy that usually take a review cycle.</p>
+      </div>
+
+      <div class="demo">
+        <p class="demo-title">Demo 2 — Audit existing infra</p>
+        <span class="prompt-tag">Prompt</span>
+<pre class="prompt">Review this folder for security misconfigurations and untagged resources, and summarize the top 5 risks ranked by severity.</pre>
+        <p class="why"><strong>Why it lands:</strong> turns a vague "is this safe?" into a ranked, actionable risk list in seconds.</p>
+      </div>
+
+      <div class="demo">
+        <p class="demo-title">Demo 3 — AI agent scaffold <span class="demo-flag">Joseph</span></p>
+        <span class="prompt-tag">Prompt</span>
+<pre class="prompt">Build a minimal Python RAG prototype: load these sample .txt files, chunk and embed them, and answer a question against them. Use Azure OpenAI and keep the API key in an env var.</pre>
+        <p class="why"><strong>Why it lands:</strong> a working AI prototype — not a tutorial — from a one-paragraph brief, with secrets handled correctly.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Engineering -->
+  <div class="fn-card">
+    <div class="fn-head">
+      <p class="fn-title">⚙️ Engineering</p>
+      <p class="fn-people">Tyler Nelson · Scott Goodman · Craig Schettler</p>
+      <span class="fn-theme">Automating repetitive ops &amp; admin</span>
+    </div>
+    <div class="fn-body">
+
+      <div class="demo">
+        <p class="demo-title">Demo 1 — Runbook &rarr; script <span class="demo-flag">Flagship</span></p>
+        <span class="prompt-tag">Prompt</span>
+<pre class="prompt">Read this onboarding runbook and write a PowerShell script that automates the Entra ID steps — create the user, assign the license group, add to the right security groups. Add comment-based help and a -WhatIf safety switch.</pre>
+        <p class="why"><strong>Why it lands:</strong> a manual checklist becomes a safe, documented, repeatable script — the everyday ops win.</p>
+      </div>
+
+      <div class="demo">
+        <p class="demo-title">Demo 2 — Debug fast</p>
+        <span class="prompt-tag">Prompt</span>
+<pre class="prompt">This script fails with this error. Find the root cause, fix it, and explain what was wrong.</pre>
+        <p class="why"><strong>Why it lands:</strong> root-cause plus a teaching explanation, so the fix sticks instead of just patching the symptom.</p>
+      </div>
+
+      <div class="demo">
+        <p class="demo-title">Demo 3 — Add tests</p>
+        <span class="prompt-tag">Prompt</span>
+<pre class="prompt">Generate Pester tests for this function covering the happy path and two failure cases.</pre>
+        <p class="why"><strong>Why it lands:</strong> the testing people always mean to add, written for them in the time it takes to ask.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BI -->
+  <div class="fn-card">
+    <div class="fn-head">
+      <p class="fn-title">📊 Business Intelligence</p>
+      <p class="fn-people">Jeff Spencer · Jessica Geiger · Guled Hersi · Asad Syed</p>
+      <span class="fn-theme">SQL · DAX · pipelines · documenting the undocumented</span>
+    </div>
+    <div class="fn-body">
+
+      <div class="demo">
+        <p class="demo-title">Demo 1 — Optimize a slow query <span class="demo-flag">Flagship</span></p>
+        <span class="prompt-tag">Prompt</span>
+<pre class="prompt">Rewrite this for performance, explain what was causing the table scan, and suggest the indexes I should add.</pre>
+        <p class="why"><strong>Why it lands:</strong> faster query <em>and</em> the reasoning behind it — performance tuning that teaches as it fixes.</p>
+      </div>
+
+      <div class="demo">
+        <p class="demo-title">Demo 2 — Reverse-engineer a stored proc</p>
+        <span class="prompt-tag">Prompt</span>
+<pre class="prompt">Read this stored procedure and produce a plain-English explanation of what it does, its inputs/outputs, and a data-lineage summary I can drop into our wiki.</pre>
+        <p class="why"><strong>Why it lands:</strong> the undocumented legacy proc everyone's afraid to touch becomes wiki-ready documentation.</p>
+      </div>
+
+      <div class="demo">
+        <p class="demo-title">Demo 3 — ETL + DAX</p>
+        <span class="prompt-tag">Prompt</span>
+<pre class="prompt">Write a Python script that ingests this 'wishes granted' sample CSV, cleans the date and chapter columns, and loads it into a SQL table.</pre>
+        <p class="followup-label">Then</p>
+<pre class="prompt">Write the DAX measures for YoY wishes-granted growth and average days-to-grant by chapter.</pre>
+        <p class="why"><strong>Why it lands:</strong> one prompt covers the pipeline, the next covers the metric — end-to-end from raw file to reportable measure.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Data & Reporting -->
+  <div class="fn-card">
+    <div class="fn-head">
+      <p class="fn-title">🗄️ Data &amp; Reporting / Governance</p>
+      <p class="fn-people">Joey Wycoff · Demario Gonzalez</p>
+      <span class="fn-theme">Governance &amp; quality as code · HIPAA-relevant</span>
+    </div>
+    <div class="fn-body">
+
+      <div class="demo">
+        <p class="demo-title">Demo 1 — PII / PHI scanner <span class="demo-flag">Flagship</span></p>
+        <span class="prompt-tag">Prompt</span>
+<pre class="prompt">Write a Python script that scans a CSV and flags columns likely to contain PII or PHI — names, DOB, diagnosis, MRN — using pattern matching, and outputs a classification report.</pre>
+        <p class="why"><strong>Why it lands:</strong> governance becomes runnable code — directly relevant to how Make-A-Wish protects sensitive data.</p>
+      </div>
+
+      <div class="demo">
+        <p class="demo-title">Demo 2 — Data-quality validation</p>
+        <span class="prompt-tag">Prompt</span>
+<pre class="prompt">Profile this dataset: null rates per column, duplicate keys, out-of-range dates, and value distributions. Output a quality scorecard.</pre>
+        <p class="why"><strong>Why it lands:</strong> a repeatable quality scorecard replaces ad-hoc eyeballing of every new dataset.</p>
+      </div>
+
+      <div class="demo">
+        <p class="demo-title">Demo 3 — Data catalog</p>
+        <span class="prompt-tag">Prompt</span>
+<pre class="prompt">Read this database schema and generate a data dictionary in markdown — table, column, type, and an inferred business description for each.</pre>
+        <p class="why"><strong>Why it lands:</strong> the data dictionary nobody has time to write, drafted from the schema itself.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Product Management -->
+  <div class="fn-card">
+    <div class="fn-head">
+      <p class="fn-title">🧭 Product Management</p>
+      <p class="fn-people">Stephen Hyams · Sadie Kinne · Regina Robidoux · Masha Power · Lisa LaBarre · Denise Johnson</p>
+      <span class="fn-theme">Idea &rarr; working prototype · killing doc drudgery</span>
+    </div>
+    <div class="fn-body">
+      <aside class="callout tip" style="margin-top:14px;">
+        <p class="callout-label">Wow factor matters most here</p>
+        <p>This is the "I don't code" group. Lead with the prototype demo — seeing a clickable tool appear from a sentence is the moment that changes minds.</p>
+      </aside>
+
+      <div class="demo">
+        <p class="demo-title">Demo 1 — PRD &rarr; clickable prototype <span class="demo-flag">Flagship</span></p>
+        <span class="prompt-tag">Prompt</span>
+<pre class="prompt">Build a single-page HTML mockup of an internal 'Wish Tracker' tool: a table of wishes with status, assigned coordinator, and chapter, plus filters and a status badge. Make it look clean.</pre>
+        <p class="why"><strong>Why it lands:</strong> a non-coder describes a tool and watches it become real — the single highest-wow moment of the session.</p>
+      </div>
+
+      <div class="demo">
+        <p class="demo-title">Demo 2 — Notes &rarr; artifacts</p>
+        <span class="prompt-tag">Prompt</span>
+<pre class="prompt">Turn these messy discovery notes into a one-page PRD with goals, user stories in 'As a… I want… so that…' format, and acceptance criteria.</pre>
+        <p class="why"><strong>Why it lands:</strong> the doc drudgery PMs dread, structured in seconds from raw notes.</p>
+      </div>
+
+      <div class="demo">
+        <p class="demo-title">Demo 3 — Synthesize research</p>
+        <span class="prompt-tag">Prompt</span>
+<pre class="prompt">Read this CSV of survey responses, cluster the themes, and give me the top 5 pain points with a representative quote for each.</pre>
+        <p class="why"><strong>Why it lands:</strong> qualitative analysis that usually takes an afternoon, delivered with supporting quotes.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SECTION 5 -->
+  <h2>5 · Suggested 60-minute agenda</h2>
+  <p>Lead with the Product Management PRD&nbsp;&rarr;&nbsp;prototype demo as the flagship opener — it's the highest-wow and sets the tone for the room.</p>
+  <table>
+    <thead><tr><th>Time</th><th>Segment</th><th>What happens</th></tr></thead>
+    <tbody>
+      <tr><td class="time">0–10</td><td>Opener + ground rule</td><td>What agentic coding is (and isn't). Set the synthetic-data ground rule before any live screen.</td></tr>
+      <tr><td class="time">10–20</td><td>Flagship live demo</td><td>Lead with the PM PRD&nbsp;&rarr;&nbsp;clickable prototype. One clear before&nbsp;&rarr;&nbsp;after.</td></tr>
+      <tr><td class="time">20–45</td><td>Rotating 5-min demos</td><td>One flagship per function — Engineering, BI, Data &amp; Reporting, InfraArch — back to back.</td></tr>
+      <tr><td class="time">45–55</td><td>Hands-on</td><td>Attendees run a prompt against the pre-staged sample files themselves.</td></tr>
+      <tr><td class="time">55–60</td><td>Close</td><td>Each person names one real task from their week to try next.</td></tr>
+    </tbody>
+  </table>
+
+  <!-- SECTION 6 -->
+  <h2>6 · Facilitation tips</h2>
+  <ul>
+    <li><strong>Pre-stage the sample files</strong> (Section 7) before the room fills, so every demo starts instantly — no fumbling for a file mid-demo.</li>
+    <li><strong>Show one clear before&nbsp;&rarr;&nbsp;after per demo.</strong> The contrast is the point: the messy input, then the finished result. Resist the urge to show every step.</li>
+    <li><strong>Close by making it personal.</strong> Have each person name one real task from their week they'll try next — that's what turns a demo into adoption.</li>
+  </ul>
+  <aside class="callout tip">
+    <p class="callout-label">Tip</p>
+    <p>Keep demos to a single outcome each. If a demo sprawls, you lose the room. The flagship per function is enough — depth beats breadth in 5 minutes.</p>
+  </aside>
+
+  <!-- SECTION 7 -->
+  <h2>7 · Sample demo files</h2>
+  <p>A companion set of <strong>synthetic demo files</strong> ships alongside this guide in the output folder, so each flagship demo is turnkey. Every file is fake by design — see the ground rule in Section 2.</p>
+  <ul>
+    <li>Fake CSVs (e.g. a synthetic "wishes granted" dataset and survey responses)</li>
+    <li>A buggy PowerShell script for the debug demo</li>
+    <li>A sample schema and stored procedure for the BI and catalog demos</li>
+    <li>A misconfigured IaC file for the infrastructure audit</li>
+    <li>Messy discovery notes for the PRD demo</li>
+  </ul>
+  <aside class="callout info">
+    <p class="callout-label">Reminder</p>
+    <p>These files exist precisely so no one needs real data. Point attendees to them for the hands-on segment and for anything they want to try after the session.</p>
+  </aside>
+
+  <div class="footer">
+    <p class="tag">Transform lives, one wish at a time.</p>
+    <p>Make-A-Wish America · IT Enablement Cohort · Agentic Coding with Claude Code</p>
+  </div>
+
+  </div><!-- /wrap -->
+</main>
+</body>
+</html>

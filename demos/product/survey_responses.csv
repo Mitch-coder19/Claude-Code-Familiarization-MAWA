@@ -1,0 +1,41 @@
+respondent_id,role,satisfaction_score,open_feedback
+R-1000,IT Analyst,2,"Onboarding new coordinators takes too long, the UI is confusing. (fake feedback)"
+R-1001,Volunteer Manager,1,"I have to enter the same data in three different places, double entry is painful. (fake)"
+R-1002,Data Analyst,5,"I have to enter the same data in three different places, double entry is painful. (fake)"
+R-1003,IT Analyst,5,"The Wish Tracker is too slow to load, takes forever every morning. (synthetic feedback)"
+R-1004,Marketing,2,"The Wish Tracker is too slow to load, takes forever every morning. (synthetic feedback)"
+R-1005,Wish Coordinator,4,"Onboarding new coordinators takes too long, the UI is confusing. (fake feedback)"
+R-1006,Wish Coordinator,2,"I have to enter the same data in three different places, double entry is painful. (fake)"
+R-1007,Marketing,4,"The Wish Tracker is too slow to load, takes forever every morning. (synthetic feedback)"
+R-1008,Data Analyst,5,"I have to enter the same data in three different places, double entry is painful. (fake)"
+R-1009,Chapter Director,5,"The Wish Tracker is too slow to load, takes forever every morning. (synthetic feedback)"
+R-1010,Marketing,5,"Onboarding new coordinators takes too long, the UI is confusing. (fake feedback)"
+R-1011,Wish Coordinator,2,"The Wish Tracker is too slow to load, takes forever every morning. (synthetic feedback)"
+R-1012,Marketing,2,"The search never finds the wish I'm looking for, very frustrating. (not real)"
+R-1013,Finance,2,"I have to enter the same data in three different places, double entry is painful. (fake)"
+R-1014,Marketing,3,"Reporting is impossible, I export to Excel just to get a simple total. (demo data)"
+R-1015,Wish Coordinator,5,Mobile access would help when I'm visiting families in the field. (sample)
+R-1016,IT Analyst,1,"I have to enter the same data in three different places, double entry is painful. (fake)"
+R-1017,Marketing,1,Mobile access would help when I'm visiting families in the field. (sample)
+R-1018,Finance,5,"Onboarding new coordinators takes too long, the UI is confusing. (fake feedback)"
+R-1019,Data Analyst,3,"Status updates don't sync between chapters, we see stale data. (demo)"
+R-1020,Marketing,4,Love the new dashboard but it logs me out constantly. (synthetic)
+R-1021,IT Analyst,2,"Reporting is impossible, I export to Excel just to get a simple total. (demo data)"
+R-1022,Volunteer Manager,2,"I have to enter the same data in three different places, double entry is painful. (fake)"
+R-1023,Marketing,3,"Status updates don't sync between chapters, we see stale data. (demo)"
+R-1024,IT Analyst,4,"The search never finds the wish I'm looking for, very frustrating. (not real)"
+R-1025,Marketing,1,"I have to enter the same data in three different places, double entry is painful. (fake)"
+R-1026,Marketing,4,"Reporting is impossible, I export to Excel just to get a simple total. (demo data)"
+R-1027,Data Analyst,3,"Reporting is impossible, I export to Excel just to get a simple total. (demo data)"
+R-1028,Finance,4,"The Wish Tracker is too slow to load, takes forever every morning. (synthetic feedback)"
+R-1029,Volunteer Manager,1,Love the new dashboard but it logs me out constantly. (synthetic)
+R-1030,IT Analyst,3,"Status updates don't sync between chapters, we see stale data. (demo)"
+R-1031,Marketing,4,"I have to enter the same data in three different places, double entry is painful. (fake)"
+R-1032,Data Analyst,1,"The search never finds the wish I'm looking for, very frustrating. (not real)"
+R-1033,Finance,1,"The Wish Tracker is too slow to load, takes forever every morning. (synthetic feedback)"
+R-1034,Volunteer Manager,3,"Status updates don't sync between chapters, we see stale data. (demo)"
+R-1035,IT Analyst,4,Love the new dashboard but it logs me out constantly. (synthetic)
+R-1036,Wish Coordinator,4,Love the new dashboard but it logs me out constantly. (synthetic)
+R-1037,Chapter Director,5,"I have to enter the same data in three different places, double entry is painful. (fake)"
+R-1038,Finance,1,Mobile access would help when I'm visiting families in the field. (sample)
+R-1039,Data Analyst,3,"Reporting is impossible, I export to Excel just to get a simple total. (demo data)"

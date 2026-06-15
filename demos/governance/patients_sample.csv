@@ -1,0 +1,31 @@
+full_name,date_of_birth,medical_record_number,diagnosis,email,phone,chapter,wish_status,coordinator_id,internal_notes
+Demo McTestface,2020-05-08,MRN-FAKE-100000,FAKE-Congenital Heart Defect,demo.mctestface@example-notreal.org,(555) 010-1000,Greater LA,Referred,COORD-211,Sibling also a patient - fake note
+Notreal Doe-Test,2009-01-03,MRN-FAKE-100001,FAKE-Congenital Heart Defect,notreal.doetest@example-notreal.org,(555) 011-1001,Greater LA,On Hold,COORD-210,Family prefers Spanish (TEST DATA)
+Synthia Demoer,2020-11-23,MRN-FAKE-100002,FAKE-Wilms Tumor,synthia.demoer@example-notreal.org,(555) 012-1002,Greater LA,Granted,COORD-210,Wish: trip to Orlando - sample
+Testy Sampleton,2020-07-11,MRN-FAKE-100003,FAKE-Sickle Cell Disease,testy.sampleton@example-notreal.org,(555) 013-1003,Greater LA,Eligible,COORD-206,Sibling also a patient - fake note
+Demo Doe-Test,2010-06-28,MRN-FAKE-100004,FAKE-Osteosarcoma,demo.doetest@example-notreal.org,(555) 014-1004,Georgia,In Progress,COORD-201,Flagged for follow-up - not real
+Synthia Fakerson,2015-02-18,MRN-FAKE-100005,FAKE-Sickle Cell Disease,synthia.fakerson@example-notreal.org,(555) 015-1005,Illinois,On Hold,COORD-206,Awaiting medical sign-off (fake)
+Demo McTestface,2019-04-25,MRN-FAKE-100006,FAKE-Sickle Cell Disease,demo.mctestface@example-notreal.org,(555) 016-1006,Arizona,Eligible,COORD-202,Parent contact pending - demo
+Example Fauxsmith,2019-06-06,MRN-FAKE-100007,FAKE-Osteosarcoma,example.fauxsmith@example-notreal.org,(555) 017-1007,North Texas,Eligible,COORD-211,Wish: trip to Orlando - sample
+Demo Nonreal,2019-03-18,MRN-FAKE-100008,FAKE-Congenital Heart Defect,demo.nonreal@example-notreal.org,(555) 018-1008,Greater LA,Granted,COORD-207,Wish: trip to Orlando - sample
+Synthia Demoer,2019-06-27,MRN-FAKE-100009,FAKE-Acute Lymphoblastic Leukemia,synthia.demoer@example-notreal.org,(555) 019-1009,Greater LA,Referred,COORD-206,Parent contact pending - demo
+Example Fakerson,2012-10-23,MRN-FAKE-100010,FAKE-Osteosarcoma,example.fakerson@example-notreal.org,(555) 010-1010,Greater LA,Granted,COORD-207,Flagged for follow-up - not real
+Sample Placeholderton,2011-04-24,MRN-FAKE-100011,FAKE-Sickle Cell Disease,sample.placeholderton@example-notreal.org,(555) 011-1011,Illinois,On Hold,COORD-207,Parent contact pending - demo
+Mocky Demoer,2011-09-16,MRN-FAKE-100012,FAKE-Neuroblastoma,mocky.demoer@example-notreal.org,(555) 012-1012,Arizona,Referred,COORD-203,Needs wheelchair access - synthetic
+Placeholder Nonreal,2010-07-13,MRN-FAKE-100013,FAKE-Muscular Dystrophy,placeholder.nonreal@example-notreal.org,(555) 013-1013,Georgia,In Progress,COORD-209,Family prefers Spanish (TEST DATA)
+Demo Examplee,2013-11-11,MRN-FAKE-100014,FAKE-Neuroblastoma,demo.examplee@example-notreal.org,(555) 014-1014,North Texas,Granted,COORD-203,Flagged for follow-up - not real
+Testy Placeholderton,2017-03-17,MRN-FAKE-100015,FAKE-Neuroblastoma,testy.placeholderton@example-notreal.org,(555) 015-1015,Illinois,In Progress,COORD-211,Awaiting medical sign-off (fake)
+Sample Mockington,2011-09-25,MRN-FAKE-100016,FAKE-Acute Lymphoblastic Leukemia,sample.mockington@example-notreal.org,(555) 016-1016,Georgia,In Progress,COORD-208,Family prefers Spanish (TEST DATA)
+Demo Mockington,2013-04-02,MRN-FAKE-100017,FAKE-Congenital Heart Defect,demo.mockington@example-notreal.org,(555) 017-1017,Georgia,Referred,COORD-202,Flagged for follow-up - not real
+Demo Examplee,2011-03-22,MRN-FAKE-100018,FAKE-Muscular Dystrophy,demo.examplee@example-notreal.org,(555) 018-1018,Georgia,Eligible,COORD-205,Parent contact pending - demo
+Fakey Examplee,2020-12-07,MRN-FAKE-100019,FAKE-Sickle Cell Disease,fakey.examplee@example-notreal.org,(555) 019-1019,Central NY,In Progress,COORD-208,Flagged for follow-up - not real
+Demo Demoer,2012-02-11,MRN-FAKE-100020,FAKE-Acute Lymphoblastic Leukemia,demo.demoer@example-notreal.org,(555) 010-1020,Georgia,On Hold,COORD-204,Awaiting medical sign-off (fake)
+Testy Fakerson,2020-11-02,MRN-FAKE-100021,FAKE-Congenital Heart Defect,testy.fakerson@example-notreal.org,(555) 011-1021,Arizona,Referred,COORD-206,Sibling also a patient - fake note
+Synthia Demoer,2013-11-16,MRN-FAKE-100022,FAKE-Congenital Heart Defect,synthia.demoer@example-notreal.org,(555) 012-1022,Georgia,Eligible,COORD-212,Flagged for follow-up - not real
+Fakey Fauxsmith,2015-04-04,MRN-FAKE-100023,FAKE-Neuroblastoma,fakey.fauxsmith@example-notreal.org,(555) 013-1023,Illinois,Granted,COORD-206,Parent contact pending - demo
+Placeholder Fauxsmith,2020-01-22,MRN-FAKE-100024,FAKE-Neuroblastoma,placeholder.fauxsmith@example-notreal.org,(555) 014-1024,Arizona,Granted,COORD-212,No notes
+Demo Demoer,2012-04-18,MRN-FAKE-100025,FAKE-Muscular Dystrophy,demo.demoer@example-notreal.org,(555) 015-1025,Greater LA,Granted,COORD-203,Wish: trip to Orlando - sample
+Dummy Demoer,2010-08-26,MRN-FAKE-100026,FAKE-Neuroblastoma,dummy.demoer@example-notreal.org,(555) 016-1026,Arizona,On Hold,COORD-201,Sibling also a patient - fake note
+Fakey Sampleton,2015-08-16,MRN-FAKE-100027,FAKE-Congenital Heart Defect,fakey.sampleton@example-notreal.org,(555) 017-1027,Central NY,Referred,COORD-203,Parent contact pending - demo
+Testy Doe-Test,2013-08-10,MRN-FAKE-100028,FAKE-Wilms Tumor,testy.doetest@example-notreal.org,(555) 018-1028,Illinois,On Hold,COORD-211,Flagged for follow-up - not real
+Sample Demoer,2013-04-02,MRN-FAKE-100029,FAKE-Acute Lymphoblastic Leukemia,sample.demoer@example-notreal.org,(555) 019-1029,Illinois,In Progress,COORD-201,Family prefers Spanish (TEST DATA)

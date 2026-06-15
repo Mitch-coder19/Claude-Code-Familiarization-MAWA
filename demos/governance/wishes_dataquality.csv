@@ -1,0 +1,41 @@
+wish_id,child_first_name,chapter,wish_type,date_referred,date_granted,days_to_grant,cost_usd,coordinator
+1000,Notreal,GEORGIA,go,2025-09-06,2025-01-17,30,13216.11,Alex Fake
+1001,Notreal,arizona,HAVE,2025-04-13,2025-02-19,73,9947.03,Alex Fake
+1002,Notreal,arizona,I wish to meet,1900-01-01,2025-10-17,90,14216.48,Sam Demo
+1003,,Az,I wish to be,2025-07-05,2025-11-21,86,8486.69,Alex Fake
+1004,Testy,GEORGIA,go,2025-10-04,2025-02-18,64,9070.62,Sam Demo
+1004,Synthia,arizona,I wish to have,2025-06-10,2025-03-15,149,11442.48,
+1006,Placeholder,Arizona,HAVE,2025-09-10,2025-11-04,44,6173.59,Alex Fake
+1007,Placeholder,ARIZONA,I wish to be,2025-05-20,2025-04-23,97,5443.17,
+1008,Mocky,North Texas,I wish to meet,2025-05-28,2025-01-03,-15,8082.91,Jordan Sample
+1009,Testy,Arizona,I wish to be,2025-03-21,2025-05-06,123,,Pat Mock
+1010,Placeholder,Arizona,I wish to go,2025-02-23,2025-03-18,19,13015.14,
+1011,Placeholder,ARIZONA,I wish to meet,2025-03-02,,20,13787.1,Sam Demo
+1012,Fakey,Illinois,I wish to go,2025-06-25,2025-09-28,114,14686.04,Alex Fake
+1013,Sample,Az,,2025-03-26,2025-03-14,16,5152.33,Jordan Sample
+1014,Dummy,Illinois,,2025-12-26,2099-12-31,50,12448.49,Alex Fake
+1015,Dummy,Arizona,,2025-08-08,2025-04-27,127,7195.9,Sam Demo
+1016,Fakey,Arizona,HAVE,2025-04-13,2025-06-09,27,-2500.0,Jordan Sample
+1017,Synthia,Illinois,go,2025-07-22,2025-09-11,17,4384.1,Jordan Sample
+1018,Sample,N. Texas,I wish to be,2025-01-04,2025-10-14,98,11742.54,Jordan Sample
+1019,Dummy,N. Texas,go,2025-02-13,2025-10-07,75,3532.64,Pat Mock
+1019,Testy,North Texas,,2025-09-22,2025-12-24,60,7370.66,Alex Fake
+1021,Synthia,N. Texas,I wish to be,2025-11-28,2025-02-24,86,9085.47,Alex Fake
+1022,Dummy,greater la,I wish to meet,2025-12-10,2025-09-05,59,999999999.0,Pat Mock
+1023,Sample,N. Texas,go,2025-05-13,2025-09-27,10,6646.5,Sam Demo
+1024,Dummy,N. Texas,go,2025-11-11,2025-08-15,123,11107.53,
+1025,Example,ARIZONA,HAVE,2025-02-10,2025-09-22,99999,10431.13,Alex Fake
+1026,Fakey,Illinois,I wish to be,2025-04-26,2025-04-05,16,3554.56,Pat Mock
+1027,Notreal,arizona,I wish to meet,2025-07-21,2025-10-07,108,8932.53,Sam Demo
+1028,Sample,Illinois,HAVE,2025-01-25,2025-02-25,118,5626.09,Alex Fake
+1029,Placeholder,GEORGIA,I wish to go,2025-09-08,2025-02-15,44,12617.0,Alex Fake
+1030,Placeholder,North Texas,go,,2025-08-20,139,8120.89,
+1031,Example,ARIZONA,HAVE,2025-08-15,2025-05-25,73,13078.35,Jordan Sample
+1032,Placeholder,GEORGIA,HAVE,2025-04-09,2025-08-03,83,5813.92,Jordan Sample
+1033,Synthia,North Texas,I wish to go,2025-03-05,2025-04-13,49,11477.03,Alex Fake
+1034,Dummy,Georgia,I wish to be,2025-09-15,2025-07-02,62,12994.69,Pat Mock
+1035,Notreal,Arizona,,2025-10-13,2025-08-01,100,6583.35,Pat Mock
+1036,Dummy,North Texas,HAVE,2025-12-18,2025-10-08,134,5633.06,Pat Mock
+1037,Example,Arizona,I wish to meet,2025-06-22,2025-11-26,113,11690.18,Pat Mock
+1038,Sample,N. Texas,go,2025-01-13,2025-10-19,179,3325.22,Alex Fake
+1039,Dummy,ARIZONA,,2025-08-06,2025-01-09,107,6928.23,Pat Mock
