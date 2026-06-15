@@ -1,6 +1,7 @@
 # 🚀 Agentic Coding with Claude Code — Familiarization Session
 
 *A clone-and-go facilitation kit for the Make-A-Wish America IT Enablement Cohort.*
+*https://mitch-coder19.github.io/Claude-Code-Familiarization-MAWA/facilitation-guide.html*
 
 ---
 
