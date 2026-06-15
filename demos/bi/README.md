@@ -57,6 +57,22 @@ write the DAX measures for YoY wishes-granted growth and average days-to-grant b
 
 ---
 
+## ✅ Requirements / Setup
+
+**Baseline (all demos):** Claude Code installed & authenticated, the repo cloned, then `cd demos/bi`. That alone is enough to **present** every demo — Claude generates the rewrite, the docs, and the scripts without a database.
+
+**To run the output for real:**
+
+| Demo | To run the output for real | Tier |
+|---|---|---|
+| 1 — Optimize slow query | SQL Server / Azure SQL with the schema + data loaded; SSMS or Azure Data Studio to run the rewrite and test indexes | C — cloud/DB |
+| 2 — Reverse-engineer proc | *(optional)* a SQL instance to verify the lineage | A — local |
+| 3 — ETL + DAX | Python 3 + `pandas` (+ `pyodbc`/`sqlalchemy`) + a SQL instance to load; **Power BI Desktop** to test the DAX | B + C |
+
+Full cross-cohort matrix and setup steps: [../REQUIREMENTS.md](../REQUIREMENTS.md).
+
+---
+
 ### ▶️ Run it
 ```bash
 cd demos/bi

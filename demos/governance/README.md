@@ -58,6 +58,22 @@ Read schema.sql and generate a data dictionary in markdown — table, column, ty
 
 ---
 
+## ✅ Requirements / Setup
+
+**Baseline (all demos):** Claude Code installed & authenticated, the repo cloned, then `cd demos/governance`. That alone is enough to **present** every demo — Claude writes the scanner, the scorecard, and the catalog regardless.
+
+**To run the output for real** — Python only; no cloud account:
+
+| Demo | To run the output for real | Tier |
+|---|---|---|
+| 1 — PII/PHI scanner | Python 3 — **standard library only** (`re`, `csv`); no packages | B — runtime |
+| 2 — Data-quality scorecard | Python 3 + `pandas` | B — runtime |
+| 3 — Data catalog | *(optional)* a SQL instance to verify | A — local |
+
+Full cross-cohort matrix and setup steps: [../REQUIREMENTS.md](../REQUIREMENTS.md).
+
+---
+
 ### ▶️ Run it
 ```bash
 cd demos/governance

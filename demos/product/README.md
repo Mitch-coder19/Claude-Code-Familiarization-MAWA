@@ -54,6 +54,22 @@ Read survey_responses.csv, cluster the themes, and give me the top 5 pain points
 
 ---
 
+## ✅ Requirements / Setup
+
+**Baseline (all demos):** Claude Code installed & authenticated, the repo cloned, then `cd demos/product`.
+
+**No extra setup — browser only.** Every demo lands on Claude *generating* the artifact; the only thing you "run" is opening the generated mockup (Demo 1) in a browser.
+
+| Demo | To run the output for real | Tier |
+|---|---|---|
+| 1 — PRD → prototype | a web browser to open the `.html` | A — local |
+| 2 — Notes → PRD | none (Markdown output) | A — local |
+| 3 — Synthesize research | none (text output) | A — local |
+
+Full cross-cohort matrix: [../REQUIREMENTS.md](../REQUIREMENTS.md).
+
+---
+
 ### ▶️ Run it
 ```bash
 cd demos/product

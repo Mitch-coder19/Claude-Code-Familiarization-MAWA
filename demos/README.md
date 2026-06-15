@@ -12,6 +12,8 @@ Each folder is self-contained: a `README.md` with copy-paste prompts plus the sy
 | ⚙️ **Engineering** | [`engineering/`](engineering/) | Automating repetitive ops and admin work. |
 | 🛡️ **Governance** | [`governance/`](governance/) | Governance & data quality as code; HIPAA-relevant. |
 
+> ✅ **What you need to run these:** see [REQUIREMENTS.md](REQUIREMENTS.md) — a per-cohort matrix of what's needed to *present* each demo (usually just Claude Code) vs. *run the output for real* (Azure, Entra ID, SQL, Python, etc.).
+
 ---
 
 🔙 Back to the [facilitator landing page → README.md](../README.md) · 🕐 [Run of show → AGENDA.md](../AGENDA.md)

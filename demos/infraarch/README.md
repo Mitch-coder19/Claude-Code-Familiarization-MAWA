@@ -57,6 +57,22 @@ Build a minimal Python RAG prototype: load these sample .txt files, chunk and em
 
 ---
 
+## ✅ Requirements / Setup
+
+**Baseline (all demos):** Claude Code installed & authenticated, the repo cloned, then `cd demos/infraarch`. That alone is enough to **present** every demo — Claude writes the Bicep and the RAG scaffold without touching Azure.
+
+**To run the output for real** — this is the cohort that genuinely needs **Azure** (no Intune involved):
+
+| Demo | To run the output for real | Tier |
+|---|---|---|
+| 1 — Scaffold compliant IaC | Bicep CLI to lint (`az bicep build`); an **Azure subscription** + Azure CLI to deploy | C — cloud |
+| 2 — Audit `main.bicep` | *(optional)* Azure to run a real scanner against it | A — local |
+| 3 — RAG prototype | Python 3 + `openai` + a RAG lib; an **Azure OpenAI** resource + model deployment, key in `AZURE_OPENAI_API_KEY` | C — cloud |
+
+Full cross-cohort matrix and setup steps: [../REQUIREMENTS.md](../REQUIREMENTS.md).
+
+---
+
 ### ▶️ Run it
 ```bash
 cd demos/infraarch

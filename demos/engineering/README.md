@@ -56,6 +56,24 @@ Generate Pester tests for the user-provisioning function covering the happy path
 
 ---
 
+## ✅ Requirements / Setup
+
+**Baseline (all demos):** Claude Code installed & authenticated, the repo cloned, then `cd demos/engineering`. That alone is enough to **present** every demo — Claude writes, fixes, and tests the script without a tenant.
+
+**To run the output for real:**
+
+| Demo | To run the output for real | Tier |
+|---|---|---|
+| 1 — Runbook → script | PowerShell 7+ + the `Microsoft.Graph` module + an **Entra ID** test tenant/account (demo with `-WhatIf`; live execution needs `Connect-MgGraph` + admin consent) | C — cloud |
+| 2 — Debug fast | PowerShell 7+ (no cloud — you can even just read the errors) | B — runtime |
+| 3 — Add tests | PowerShell 7+ + `Pester` (tests mock the Graph cmdlets — no tenant) | B — runtime |
+
+> 📌 This cohort connects to **Entra ID** (Microsoft Graph), **not Intune**. And only Demo 1 needs it — only if you run past `-WhatIf`.
+
+Full cross-cohort matrix and setup steps: [../REQUIREMENTS.md](../REQUIREMENTS.md).
+
+---
+
 ### ▶️ Run it
 ```bash
 cd demos/engineering
