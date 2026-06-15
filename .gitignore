@@ -21,3 +21,11 @@ yarn-error.log*
 
 # NOTE: the demo data files under demos/ are SYNTHETIC and intentionally
 # committed. Do not add them here.
+
+# ---- graphify ----
+# Ignore graphify working state (cache, interpreter pointers, manifest, cost
+# tracker, temp chunk files) but keep the three published outputs.
+graphify-out/*
+!graphify-out/graph.html
+!graphify-out/graph.json
+!graphify-out/GRAPH_REPORT.md

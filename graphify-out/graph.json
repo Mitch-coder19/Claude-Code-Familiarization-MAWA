@@ -1,0 +1,1006 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "hyperedges": [
+      {
+        "id": "bi_wish_data_model",
+        "label": "Wish data model shared across BI demos",
+        "nodes": [
+          "bi_schema_wishes",
+          "bi_slow_query_slowquery",
+          "bi_usp_wishsummary_usp_wishsummary"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": "demos/bi/schema.sql"
+      },
+      {
+        "id": "engineering_onboarding_automation_flow",
+        "label": "Runbook-to-script onboarding automation flow",
+        "nodes": [
+          "engineering_onboarding_runbook_onboardingrunbook",
+          "engineering_provision_newuser_provisionnewuser",
+          "engineering_readme_engineering"
+        ],
+        "relation": "participate_in",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": "demos/engineering/README.md"
+      },
+      {
+        "id": "session_facilitation_kit",
+        "label": "Session facilitation kit",
+        "nodes": [
+          "readme_familiarization_session",
+          "agenda_run_of_show",
+          "docs_facilitation_guide_facilitationguide",
+          "demos_demos_index"
+        ],
+        "relation": "form",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": "README.md"
+      }
+    ]
+  },
+  "nodes": [
+    {
+      "label": "Provision-NewUser.ps1",
+      "file_type": "code",
+      "source_file": "demos/engineering/Provision-NewUser.ps1",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "engineering_provision_newuser",
+      "community": 1,
+      "norm_label": "provision-newuser.ps1"
+    },
+    {
+      "label": "Chapters Table",
+      "file_type": "code",
+      "source_file": "demos/bi/schema.sql",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "bi_schema_chapters",
+      "community": 0,
+      "norm_label": "chapters table"
+    },
+    {
+      "label": "Coordinators Table",
+      "file_type": "code",
+      "source_file": "demos/bi/schema.sql",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "bi_schema_coordinators",
+      "community": 0,
+      "norm_label": "coordinators table"
+    },
+    {
+      "label": "Donors Table",
+      "file_type": "code",
+      "source_file": "demos/bi/schema.sql",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "bi_schema_donors",
+      "community": 0,
+      "norm_label": "donors table"
+    },
+    {
+      "label": "Referrals Table",
+      "file_type": "code",
+      "source_file": "demos/bi/schema.sql",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "bi_schema_referrals",
+      "community": 0,
+      "norm_label": "referrals table"
+    },
+    {
+      "label": "Wishes Table",
+      "file_type": "code",
+      "source_file": "demos/bi/schema.sql",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "bi_schema_wishes",
+      "community": 0,
+      "norm_label": "wishes table"
+    },
+    {
+      "label": "WishDonations Table",
+      "file_type": "code",
+      "source_file": "demos/bi/schema.sql",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "bi_schema_wishdonations",
+      "community": 0,
+      "norm_label": "wishdonations table"
+    },
+    {
+      "label": "Slow Query (anti-pattern demo)",
+      "file_type": "code",
+      "source_file": "demos/bi/slow_query.sql",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "bi_slow_query_slowquery",
+      "community": 0,
+      "norm_label": "slow query (anti-pattern demo)"
+    },
+    {
+      "label": "usp_WishSummary Stored Procedure",
+      "file_type": "code",
+      "source_file": "demos/bi/usp_WishSummary.sql",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "bi_usp_wishsummary_usp_wishsummary",
+      "community": 0,
+      "norm_label": "usp_wishsummary stored procedure"
+    },
+    {
+      "label": "New User Onboarding Runbook",
+      "file_type": "document",
+      "source_file": "demos/engineering/onboarding-runbook.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "engineering_onboarding_runbook_onboardingrunbook",
+      "community": 1,
+      "norm_label": "new user onboarding runbook"
+    },
+    {
+      "label": "Bug: misspelled -DisplayNam parameter",
+      "file_type": "concept",
+      "source_file": "demos/engineering/Provision-NewUser.ps1",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "engineering_provision_newuser_displaynam_bug",
+      "community": 1,
+      "norm_label": "bug: misspelled -displaynam parameter"
+    },
+    {
+      "label": "Bug: wrong variable $NewUsr reference",
+      "file_type": "concept",
+      "source_file": "demos/engineering/Provision-NewUser.ps1",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "engineering_provision_newuser_newusr_bug",
+      "community": 1,
+      "norm_label": "bug: wrong variable $newusr reference"
+    },
+    {
+      "label": "Bug: missing null check on $group",
+      "file_type": "concept",
+      "source_file": "demos/engineering/Provision-NewUser.ps1",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "engineering_provision_newuser_nullcheck_bug",
+      "community": 1,
+      "norm_label": "bug: missing null check on $group"
+    },
+    {
+      "label": "Bug: inverted license-availability comparison",
+      "file_type": "concept",
+      "source_file": "demos/engineering/Provision-NewUser.ps1",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "engineering_provision_newuser_license_logic_bug",
+      "community": 1,
+      "norm_label": "bug: inverted license-availability comparison"
+    },
+    {
+      "label": "60-Minute Run of Show",
+      "file_type": "document",
+      "source_file": "AGENDA.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "agenda_run_of_show",
+      "community": 2,
+      "norm_label": "60-minute run of show"
+    },
+    {
+      "label": "Familiarization Session (landing page)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_familiarization_session",
+      "community": 3,
+      "norm_label": "familiarization session (landing page)"
+    },
+    {
+      "label": "Agentic Coding",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "agentic_coding",
+      "community": 3,
+      "norm_label": "agentic coding"
+    },
+    {
+      "label": "Synthetic Data Only Ground Rule",
+      "file_type": "rationale",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "synthetic_data_only",
+      "community": 3,
+      "norm_label": "synthetic data only ground rule"
+    },
+    {
+      "label": "Demos by Function Index",
+      "file_type": "document",
+      "source_file": "demos/README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "demos_demos_index",
+      "community": 2,
+      "norm_label": "demos by function index"
+    },
+    {
+      "label": "Business Intelligence Demos",
+      "file_type": "document",
+      "source_file": "demos/bi/README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "bi_readme_bi",
+      "community": 0,
+      "norm_label": "business intelligence demos"
+    },
+    {
+      "label": "Engineering Demos",
+      "file_type": "document",
+      "source_file": "demos/engineering/README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "engineering_readme_engineering",
+      "community": 1,
+      "norm_label": "engineering demos"
+    },
+    {
+      "label": "Governance Demos",
+      "file_type": "document",
+      "source_file": "demos/governance/README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "governance_readme_governance",
+      "community": 2,
+      "norm_label": "governance demos"
+    },
+    {
+      "label": "InfraArch Demos",
+      "file_type": "document",
+      "source_file": "demos/infraarch/README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "infraarch_readme_infraarch",
+      "community": 2,
+      "norm_label": "infraarch demos"
+    },
+    {
+      "label": "Product Management Demos",
+      "file_type": "document",
+      "source_file": "demos/product/README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "product_readme_product",
+      "community": 4,
+      "norm_label": "product management demos"
+    },
+    {
+      "label": "Wish Tracker Discovery Notes",
+      "file_type": "document",
+      "source_file": "demos/product/discovery-notes.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "product_discovery_notes_discoverynotes",
+      "community": 4,
+      "norm_label": "wish tracker discovery notes"
+    },
+    {
+      "label": "Facilitation Guide & Demo Playbook",
+      "file_type": "document",
+      "source_file": "docs/facilitation-guide.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docs_facilitation_guide_facilitationguide",
+      "community": 3,
+      "norm_label": "facilitation guide & demo playbook"
+    },
+    {
+      "label": "Wish Tracker Tool",
+      "file_type": "concept",
+      "source_file": "demos/product/discovery-notes.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "wish_tracker_tool",
+      "community": 4,
+      "norm_label": "wish tracker tool"
+    },
+    {
+      "label": "Project local settings",
+      "file_type": "code",
+      "source_file": ".claude/settings.local.json",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "settings_local_settingslocal",
+      "community": 5,
+      "norm_label": "project local settings"
+    }
+  ],
+  "links": [
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/engineering/Provision-NewUser.ps1",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "engineering_provision_newuser_displaynam_bug",
+      "target": "engineering_provision_newuser"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/engineering/Provision-NewUser.ps1",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "engineering_provision_newuser_license_logic_bug",
+      "target": "engineering_provision_newuser"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/engineering/Provision-NewUser.ps1",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "engineering_provision_newuser_newusr_bug",
+      "target": "engineering_provision_newuser"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/engineering/Provision-NewUser.ps1",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "engineering_provision_newuser_nullcheck_bug",
+      "target": "engineering_provision_newuser"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/engineering/onboarding-runbook.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "engineering_provision_newuser",
+      "target": "engineering_onboarding_runbook_onboardingrunbook"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/engineering/README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "engineering_readme_engineering",
+      "target": "engineering_provision_newuser"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/bi/schema.sql",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "bi_schema_coordinators",
+      "target": "bi_schema_chapters"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/bi/schema.sql",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "bi_schema_donors",
+      "target": "bi_schema_chapters"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/bi/schema.sql",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "bi_schema_referrals",
+      "target": "bi_schema_chapters"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/bi/schema.sql",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "bi_schema_wishes",
+      "target": "bi_schema_chapters"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/bi/slow_query.sql",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "bi_slow_query_slowquery",
+      "target": "bi_schema_chapters"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/bi/usp_WishSummary.sql",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "bi_usp_wishsummary_usp_wishsummary",
+      "target": "bi_schema_chapters"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/bi/schema.sql",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "bi_schema_wishes",
+      "target": "bi_schema_coordinators"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/bi/slow_query.sql",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "bi_slow_query_slowquery",
+      "target": "bi_schema_coordinators"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/bi/usp_WishSummary.sql",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "bi_usp_wishsummary_usp_wishsummary",
+      "target": "bi_schema_coordinators"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/bi/schema.sql",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "bi_schema_wishdonations",
+      "target": "bi_schema_donors"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/bi/schema.sql",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "bi_schema_wishes",
+      "target": "bi_schema_referrals"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/bi/README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "bi_readme_bi",
+      "target": "bi_schema_wishes"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/bi/schema.sql",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "bi_schema_wishdonations",
+      "target": "bi_schema_wishes"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/bi/slow_query.sql",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "bi_slow_query_slowquery",
+      "target": "bi_schema_wishes"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/bi/usp_WishSummary.sql",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "bi_usp_wishsummary_usp_wishsummary",
+      "target": "bi_schema_wishes"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/governance/README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "governance_readme_governance",
+      "target": "bi_schema_wishes"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "demos/product/discovery-notes.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "wish_tracker_tool",
+      "target": "bi_schema_wishes"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/bi/README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "bi_readme_bi",
+      "target": "bi_slow_query_slowquery"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "demos/bi/slow_query.sql",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "bi_slow_query_slowquery",
+      "target": "bi_usp_wishsummary_usp_wishsummary"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/bi/README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "bi_readme_bi",
+      "target": "bi_usp_wishsummary_usp_wishsummary"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "demos/engineering/onboarding-runbook.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "engineering_onboarding_runbook_onboardingrunbook",
+      "target": "engineering_provision_newuser_license_logic_bug"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/engineering/README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "engineering_readme_engineering",
+      "target": "engineering_onboarding_runbook_onboardingrunbook"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/engineering/README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "engineering_readme_engineering",
+      "target": "engineering_provision_newuser_displaynam_bug"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/engineering/README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "engineering_readme_engineering",
+      "target": "engineering_provision_newuser_newusr_bug"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/engineering/README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "engineering_readme_engineering",
+      "target": "engineering_provision_newuser_nullcheck_bug"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/engineering/README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "engineering_readme_engineering",
+      "target": "engineering_provision_newuser_license_logic_bug"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENDA.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "agenda_run_of_show",
+      "target": "bi_readme_bi"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENDA.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "agenda_run_of_show",
+      "target": "demos_demos_index"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENDA.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "agenda_run_of_show",
+      "target": "engineering_readme_engineering"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENDA.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "agenda_run_of_show",
+      "target": "governance_readme_governance"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENDA.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "agenda_run_of_show",
+      "target": "infraarch_readme_infraarch"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENDA.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "agenda_run_of_show",
+      "target": "product_readme_product"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENDA.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "agenda_run_of_show",
+      "target": "readme_familiarization_session"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/facilitation-guide.html",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_facilitation_guide_facilitationguide",
+      "target": "agenda_run_of_show"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_familiarization_session",
+      "target": "agentic_coding"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_familiarization_session",
+      "target": "demos_demos_index"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_familiarization_session",
+      "target": "docs_facilitation_guide_facilitationguide"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_familiarization_session",
+      "target": "synthetic_data_only"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/facilitation-guide.html",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_facilitation_guide_facilitationguide",
+      "target": "agentic_coding"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/facilitation-guide.html",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docs_facilitation_guide_facilitationguide",
+      "target": "synthetic_data_only"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "synthetic_data_only",
+      "target": "wish_tracker_tool"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "demos_demos_index",
+      "target": "bi_readme_bi"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "demos_demos_index",
+      "target": "engineering_readme_engineering"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "demos_demos_index",
+      "target": "governance_readme_governance"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "demos_demos_index",
+      "target": "infraarch_readme_infraarch"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "demos_demos_index",
+      "target": "product_readme_product"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/product/README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "product_readme_product",
+      "target": "product_discovery_notes_discoverynotes"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/product/README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "product_readme_product",
+      "target": "wish_tracker_tool"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "demos/product/discovery-notes.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "product_discovery_notes_discoverynotes",
+      "target": "wish_tracker_tool"
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "bi_wish_data_model",
+      "label": "Wish data model shared across BI demos",
+      "nodes": [
+        "bi_schema_wishes",
+        "bi_slow_query_slowquery",
+        "bi_usp_wishsummary_usp_wishsummary"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "demos/bi/schema.sql"
+    },
+    {
+      "id": "engineering_onboarding_automation_flow",
+      "label": "Runbook-to-script onboarding automation flow",
+      "nodes": [
+        "engineering_onboarding_runbook_onboardingrunbook",
+        "engineering_provision_newuser_provisionnewuser",
+        "engineering_readme_engineering"
+      ],
+      "relation": "participate_in",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "demos/engineering/README.md"
+    },
+    {
+      "id": "session_facilitation_kit",
+      "label": "Session facilitation kit",
+      "nodes": [
+        "readme_familiarization_session",
+        "agenda_run_of_show",
+        "docs_facilitation_guide_facilitationguide",
+        "demos_demos_index"
+      ],
+      "relation": "form",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "README.md"
+    }
+  ],
+  "built_at_commit": "0370ce6bf60fc005f2dcb74269d7eb2fa17f9b4c"
+}
